@@ -1,0 +1,16 @@
+2026-03-01 09:00:00 [INFO] training_started model=act
+2026-03-01 09:00:30 [INFO] epoch=1 step=50 loss=2.4310 lr=0.001
+2026-03-01 09:01:00 [INFO] epoch=1 step=100 loss=2.1875 lr=0.001
+2026-03-01 09:01:12 [WARN] gpu_memory_high usage=91%
+2026-03-01 09:01:30 [INFO] epoch=1 step=150 loss=1.9642 lr=0.001
+2026-03-01 09:01:41 [ERROR] dataloader_timeout worker=3
+2026-03-01 09:02:00 [INFO] epoch=2 step=200 loss=1.7208 lr=0.001
+2026-03-01 09:02:30 [INFO] epoch=2 step=250 loss=1.5531 lr=0.001
+2026-03-01 09:02:44 [ERROR] dataloader_timeout worker=1
+2026-03-01 09:03:00 [INFO] epoch=2 step=300 loss=1.6120 lr=0.001
+2026-03-01 09:03:05 [WARN] slow_batch ms=1840
+2026-03-01 09:03:30 [INFO] epoch=3 step=350 loss=1.2947 lr=0.0005
+2026-03-01 09:03:52 [ERROR] camera_frame_dropped count=4
+2026-03-01 09:04:00 [INFO] epoch=3 step=400 loss=1.1093 lr=0.0005
+2026-03-01 09:04:30 [INFO] epoch=3 step=450 loss=1.1468 lr=0.0005
+2026-03-01 09:04:31 [INFO] checkpoint_saved epoch=3

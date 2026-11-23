@@ -1,0 +1,31 @@
+{
+  "id": "chatcmpl-mcp-001",
+  "object": "chat.completion",
+  "created": 1763870701,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "我先看看实验室有哪些机器人。",
+        "tool_calls": [
+          {
+            "id": "call_mcp_01",
+            "type": "function",
+            "function": {
+              "name": "mcp__robot__list_robots",
+              "arguments": "{}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 520,
+    "completion_tokens": 22,
+    "total_tokens": 542
+  }
+}

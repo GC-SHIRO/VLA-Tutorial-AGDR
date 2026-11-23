@@ -1,0 +1,17 @@
+{
+  "id": "chatcmpl-sample-001",
+  "object": "chat.completion",
+  "created": 1763870400,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "VLA（Vision-Language-Action）模型接收图像和语言指令，直接输出机器人的动作。"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {"prompt_tokens": 38, "completion_tokens": 27, "total_tokens": 65}
+}

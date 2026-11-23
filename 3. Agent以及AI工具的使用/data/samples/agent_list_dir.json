@@ -1,0 +1,31 @@
+{
+  "id": "chatcmpl-agent-001",
+  "object": "chat.completion",
+  "created": 1763870501,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "我先看看工作区里有哪些文件。",
+        "tool_calls": [
+          {
+            "id": "call_agent_01",
+            "type": "function",
+            "function": {
+              "name": "list_dir",
+              "arguments": "{\"path\": \".\"}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 402,
+    "completion_tokens": 31,
+    "total_tokens": 433
+  }
+}

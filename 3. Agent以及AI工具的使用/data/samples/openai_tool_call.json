@@ -1,0 +1,27 @@
+{
+  "id": "chatcmpl-sample-003",
+  "object": "chat.completion",
+  "created": 1763870420,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "tool_calls": [
+          {
+            "id": "call_sample_01",
+            "type": "function",
+            "function": {
+              "name": "query_robot_battery",
+              "arguments": "{\"robot_id\": \"so100-02\"}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls"
+    }
+  ],
+  "usage": {"prompt_tokens": 112, "completion_tokens": 21, "total_tokens": 133}
+}

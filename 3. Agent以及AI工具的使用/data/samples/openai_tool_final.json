@@ -1,0 +1,17 @@
+{
+  "id": "chatcmpl-sample-004",
+  "object": "chat.completion",
+  "created": 1763870430,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "so100-02 当前电量 23%，已经偏低，建议先充电再做实验。"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {"prompt_tokens": 160, "completion_tokens": 24, "total_tokens": 184}
+}

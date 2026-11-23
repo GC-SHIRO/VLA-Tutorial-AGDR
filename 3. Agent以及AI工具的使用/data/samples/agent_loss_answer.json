@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-agent-003",
+  "object": "chat.completion",
+  "created": 1763870503,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "训练日志中最低的 loss 是 0.98，出现在第 4 个 epoch。"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 655,
+    "completion_tokens": 24,
+    "total_tokens": 679
+  }
+}

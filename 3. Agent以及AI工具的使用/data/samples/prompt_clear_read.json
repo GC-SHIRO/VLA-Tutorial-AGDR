@@ -1,0 +1,39 @@
+{
+  "id": "chatcmpl-prompt-003",
+  "object": "chat.completion",
+  "created": 1763870903,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "我先读取训练日志和配置文件。",
+        "tool_calls": [
+          {
+            "id": "call_p_02",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\"path\": \"train.log\"}"
+            }
+          },
+          {
+            "id": "call_p_03",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\"path\": \"config.json\"}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 512,
+    "completion_tokens": 44,
+    "total_tokens": 556
+  }
+}

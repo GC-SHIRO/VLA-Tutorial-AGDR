@@ -1,0 +1,39 @@
+{
+  "id": "chatcmpl-code-002",
+  "object": "chat.completion",
+  "created": 1763871102,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "测试期望 8.1，实际得到 '12.4'。我看一下代码和测试。",
+        "tool_calls": [
+          {
+            "id": "call_c_02",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\"path\": \"stats.py\"}"
+            }
+          },
+          {
+            "id": "call_c_03",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\"path\": \"test_stats.py\"}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 930,
+    "completion_tokens": 48,
+    "total_tokens": 978
+  }
+}

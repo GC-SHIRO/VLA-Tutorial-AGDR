@@ -74,6 +74,11 @@
 
 > 说明：Agent 无法被技术手段完全约束，所以这条依赖 Agent 遵守；作业成果由 Shiro 通过 Pull Request 和 Issue 人工检查。
 
+**唯一的例外：第 3 章作业一。** 这项作业的目的就是练习和 Agent 合作：学习者在**本仓库之外**自建的 GitHub 仓库里，借助 Agent 开发一个 TUI Agent。例外只适用于那个仓库。在本仓库内，Agent 仍按上述原则行事：
+
+- 不替学习者创建或修改 `submission/` 下的任何文件，包括放仓库链接的 md 文件
+- 学习者在本仓库里就作业一提问时，按问答模式讲思路、给提示，不代写 TUI Agent 的代码，也不代写学习者仓库里的 `AGENTS.md`
+
 ### 问答知识点模式
 
 目标：解答学习者对某一章知识点的疑问。
@@ -141,6 +146,15 @@
 │   ├── data/                          # 作业用的模拟训练日志
 │   └── submission/                    # 学习者通过 Pull Request 提交的作业
 ├── 3. Agent以及AI工具的使用/
+│   ├── 00-导读与学习计划.ipynb         # 一周计划、API 配置与离线模式，从这里开始
+│   ├── 01 ~ 09 各小节.ipynb           # 01–05 原理，06–09 使用；只含不计分的「动手试试」
+│   ├── 10-综合任务.ipynb              # 全章统一的作业与选择题
+│   ├── Agent选择题协议.md             # 答题模式的章节协议，统一覆盖全章
+│   ├── mini_agent.py                  # 02 节写出的 mini agent，03 节起导入使用
+│   ├── data/                          # 离线示例响应（samples/）与 08 节的 bug 项目
+│   ├── mcp_servers/                   # 04 节的 MCP server
+│   ├── skills/、hooks/                # 05 节的示例 Skill 与 Hook
+│   └── submission/                    # 学习者通过 Pull Request 提交的作业
 ├── 4. 机器学习基础与Python环境/
 ├── 5. 深度学习基础/
 ├── 6. 机器人基础（ROS2与运动学）/
@@ -149,7 +163,8 @@
 ```
 
 - 章节以 `.ipynb` 为主要载体；内容较多的章节可拆成多个带编号的小节 notebook，作业和选择题集中在最后的综合任务中
-- 含 shell 演示的 notebook 提供 PowerShell 和 bash 两个版本，内容一致，只有演示命令语法不同。第 2 章例外：它只讲 Linux，只提供 bash 版，默认学习者已有虚拟机或双系统
+- 含 shell 演示的 notebook 提供 PowerShell 和 bash 两个版本，内容一致，只有演示命令语法不同。第 2 章例外：它只讲 Linux，只提供 bash 版，默认学习者已有虚拟机或双系统。第 3 章的代码是 Python，只提供一个版本，Windows、macOS、Linux 通用
+- 需要调用大模型 API 的 notebook 要提供离线模式：没有 key 时读取 `data/samples/` 下预先录制的响应（见第 3 章）
 - 需要答题模式的章节，在章节目录下放 `Agent选择题协议.md`
 - TODO：文件命名规则、图片 / 数据资源存放位置、notebook 输出是否提交
 

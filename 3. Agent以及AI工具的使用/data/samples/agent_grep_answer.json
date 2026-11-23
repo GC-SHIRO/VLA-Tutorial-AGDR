@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-agent-005",
+  "object": "chat.completion",
+  "created": 1763870505,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "train.log 中共有 3 行 ERROR。"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 462,
+    "completion_tokens": 15,
+    "total_tokens": 477
+  }
+}

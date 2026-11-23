@@ -1,0 +1,31 @@
+{
+  "id": "chatcmpl-code-004",
+  "object": "chat.completion",
+  "created": 1763871104,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "修改完成，重新运行测试确认。",
+        "tool_calls": [
+          {
+            "id": "call_c_05",
+            "type": "function",
+            "function": {
+              "name": "run_command",
+              "arguments": "{\"command\": \"python3 -m unittest test_stats\"}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1460,
+    "completion_tokens": 28,
+    "total_tokens": 1488
+  }
+}

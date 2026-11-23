@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-prompt-004",
+  "object": "chat.completion",
+  "created": 1763870904,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "**结论：不建议直接用最后一个 checkpoint 上真机，可以用 epoch 4 的 checkpoint 先做低风险测试。**\n\n依据：\n\n1. 最低 loss 出现在 epoch 4（`[INFO] epoch=4 loss=0.98`），最后一个 epoch 回升到 1.05（`[INFO] epoch=5 loss=1.05`），最后的 checkpoint 不是最好的。\n2. 训练中出现了 2 次 `[ERROR] dataloader_timeout` 和 1 次 `[ERROR] camera_frame_dropped`，部分 batch 可能缺少图像数据，建议先确认数据是否完整。\n3. 训练只跑了 5 个 epoch（config.json 中 `\"epochs\": 5`），loss 仍在 1 左右，模型可能还没有充分收敛。\n\n说明：训练日志只能反映 loss 的变化，无法判断真机上的实际效果。以上只是「能否进入测试」的初步判断，真机测试时建议先在低速模式下进行。"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 735,
+    "completion_tokens": 260,
+    "total_tokens": 995
+  }
+}

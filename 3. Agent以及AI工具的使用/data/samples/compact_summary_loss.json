@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-compact-002",
+  "object": "chat.completion",
+  "created": 1763870602,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "## 已确认的事实\n- 工作区文件：README.md、config.json、train.log\n- 已读取 train.log：共 5 个 epoch，loss 依次为 2.31、1.87、1.42、0.98、1.05\n- 日志中另有 1 条 WARN 和 3 条 ERROR\n## 未完成\n- 给出最终回答：最低 loss 及其所在的 epoch"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 690,
+    "completion_tokens": 118,
+    "total_tokens": 808
+  }
+}

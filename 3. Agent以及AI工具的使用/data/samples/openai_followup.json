@@ -1,0 +1,17 @@
+{
+  "id": "chatcmpl-sample-002",
+  "object": "chat.completion",
+  "created": 1763870410,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "举个例子：给机器人一张桌面照片和指令「把红色方块放进盒子」，VLA 模型会输出每一步机械臂关节该怎么动。"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {"prompt_tokens": 80, "completion_tokens": 41, "total_tokens": 121}
+}

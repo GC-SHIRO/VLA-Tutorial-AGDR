@@ -1,0 +1,31 @@
+{
+  "id": "chatcmpl-agent-002",
+  "object": "chat.completion",
+  "created": 1763870502,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "train.log 应该就是训练日志，我读一下内容。",
+        "tool_calls": [
+          {
+            "id": "call_agent_02",
+            "type": "function",
+            "function": {
+              "name": "read_file",
+              "arguments": "{\"path\": \"train.log\"}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 33,
+    "total_tokens": 501
+  }
+}

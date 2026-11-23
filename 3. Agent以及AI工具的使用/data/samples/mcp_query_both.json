@@ -1,0 +1,39 @@
+{
+  "id": "chatcmpl-mcp-002",
+  "object": "chat.completion",
+  "created": 1763870702,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "有两台，我分别查一下电量。",
+        "tool_calls": [
+          {
+            "id": "call_mcp_02",
+            "type": "function",
+            "function": {
+              "name": "mcp__robot__query_robot_battery",
+              "arguments": "{\"robot_id\": \"so100-01\"}"
+            }
+          },
+          {
+            "id": "call_mcp_03",
+            "type": "function",
+            "function": {
+              "name": "mcp__robot__query_robot_battery",
+              "arguments": "{\"robot_id\": \"so100-02\"}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 571,
+    "completion_tokens": 58,
+    "total_tokens": 629
+  }
+}

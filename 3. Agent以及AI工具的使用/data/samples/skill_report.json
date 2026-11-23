@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-skill-003",
+  "object": "chat.completion",
+  "created": 1763870803,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "## 训练报告：train.log\n\n- epoch 数：5\n- 最低 loss：0.98（epoch 4）\n- 最后一个 epoch 的 loss：1.05\n- WARN：1；ERROR：3，最常见的是 dataloader_timeout（2 次）\n\n## 结论\n\nloss 整体在下降，但最后一个 epoch（1.05）高于最低值，建议考虑 early stopping，或改用 epoch 4 的 checkpoint。dataloader_timeout 出现了 2 次，建议检查 num_workers 的设置和数据所在磁盘的读取速度。"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1105,
+    "completion_tokens": 190,
+    "total_tokens": 1295
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "chatcmpl-skill-005",
+  "object": "chat.completion",
+  "created": 1763870805,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "删除命令被安全规则阻止了，我没有删除任何文件。如果确实要清理，建议你先确认要删除哪些文件，再手动删除。"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 488,
+    "completion_tokens": 45,
+    "total_tokens": 533
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "chatcmpl-code-001",
+  "object": "chat.completion",
+  "created": 1763871101,
+  "model": "example-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "我先运行测试，看看失败的具体信息。",
+        "tool_calls": [
+          {
+            "id": "call_c_01",
+            "type": "function",
+            "function": {
+              "name": "run_command",
+              "arguments": "{\"command\": \"python3 -m unittest test_stats\"}"
+            }
+          }
+        ]
+      },
+      "finish_reason": "tool_calls"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 700,
+    "completion_tokens": 30,
+    "total_tokens": 730
+  }
+}
